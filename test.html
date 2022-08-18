@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- SEO -->
+  <meta name="description" content="Want to know your typing speed but don't have time? You are just one click away to know your typing speed for free.">
+  <meta name="keywords" content="Typing, online, typing online, typing test, typing test for free,typing speed, how to know typing speed, touch typing, free typing, online typing website, touch typing, What is typing?, what is touch typing?, Top 6 benifits of touch typing, How to umprove your typing speed?">
+  <meta name="author" content="Vivek Lohar">
+  <!-- Responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title -->
+  <title>Test your typing speed online for free in just few minutes</title>
+  <!-- apple touch icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://yourdomain.com/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utility.css">
+  <!-- Custom Links -->
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!------- Google Icons Link -------->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <!-- Navigation Bar Start Here -->
+  <nav class="navigation">
+    <a href="index.html">TypingOnline</a>
+    <!-- toggle menu -->
+    <i class="material-icons" id="sidemenu">menu</i>
+    <!-- Small Device navigation menu -->
+    <ul class="menu" id="list">
+      <i class="material-icons" sidemenu id="closemenu">close</i>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="test.html">Test</a></li>
+      <li><a href="#Blogs">Blogs</a></li>
+    </ul>
+  </nav>
+  <!-- Navigation Bar ends Here -->
+  <!-- header strts here -->
+  <header>
+    <div class="typing-text" id="text">
+    </div>
+    <a href="#test" class="btn">Start Test</a>
+  </header>
+  <!-- header ends here -->
+  <!-- Quick start section starts here -->
+  <section class="quick-start">
+    <div class="quick-start-container">
+      <h1>Free Online Typing Test - learn More about typing</h1>
+      <p>You can practice as much as necessary because you have no limits.</p>
+      <p>Grab your keyboard and get your typing speed timed!<br></p>
+      <a href="#test" class="btn">Start Test</a>
+    </div>
+  </section>
+  <!-- Quick start section ends here -->
+  <!-- Typing Options starts here -->
+  <section class="info-section">
+    <div class="test-info">
+      <div class="info">
+        <h3 class="heading">few steps</h3>
+        <img src="typewriter.svg" alt="svg image">
+        <p>Let's Take a Look...</p>
+        <p>Speed of typing is very important for daily work. Typing speed is very much required to perform a given task on time so it is very important for your typing speed to be good.</p>
+        <p>first, you will need to know the buttons of the keyboard, you will be sure which button is where and you will become familiar with the keyboard. </p>
+        <p>Secondly, practice is very important. The more practice, the better the result. For this you can use our tool so that you know the speed of your typing and if you make any mistake.</p>
+        <a href="#test" class="btn">Start Test</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Information section starts here -->
+  <!-- Typing test starts here -->
+  <section id="test" class="test-container">
+    <div class="container">
+      <div class="stats">
+        <p>Time: <span id="timer">0s</span></p>
+        <p>Mistakes: <span id="mistakes">0</span></p>
+      </div>
+      <div id="quote" onmousedown="return false" onselectstart="return false"></div>
+      <textarea rows="3" id="quote-input" placeholder="Type here when the test starts.."></textarea>
+      <button id="start-test" onclick="startTest()">Start Test</button>
+      <button id="stop-test" onclick="displayResult()">Stop Test</button>
+      <div class="result">
+        <h3>Result</h3>
+        <div class="wrapper">
+          <p>Accuracy: <span id="accuracy"></span></p>
+          <p>Speed: <span id="wpm"></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Typing section ends here -->
+  <!-- artical section starts here -->
+  <section class="artical-section">
+    <div class="artical-container">
+      <article>
+        <h2>What is typing?</h2>
+        <p>Typing is the process of inputting text by pressing keys on a typewriter, computer keyboard, cell phone, or calculator. Text can be in the form of letters, numbers and other symbols. It can be distinguished from other means of text input, such as handwriting and speech recognition.</p>
+      </article>
+      <br>
+      <article>
+        <h2>What is touch typing?</h2>
+        <p>The method of inputting text by feeling the keyboard keys is known as touch typing. Practice of typing can give you better understanding of the keyboard.</p>
+      </article>
+      <br>
+      <article>
+        <h2>Top 6 Benefits of Touch Typing:</h2>
+        <p>
+          <b>1. Speed - <br></b>This is going to be the first and most obvious benefit of learning to touch type. A touch typist can easily reach typing speeds above 75-80 words per minute, while a non-trained individual is around 10. This is increased by the fact that an accomplished touch typist does not have to look at the keyboard. Not only will you become more efficient, but you will also be able to direct focus where required.
+        </p>
+        <p>
+          <b>2. Accuracy - <br></b>One of the most important things to learn no matter how hard you type is to type accurately. This increase yours or your staff’s confidence in their document production as they will know what they are writing is spelt correctly and grammatically accurate.
+        </p>
+        <p><b>3 Time - <br></b>If you increase your typing speed for example, from say 30 words per minute to 60, you have effectively halved the time it would take you to do the same amount of work. An average two finger typist, typing at a speed of 10 words per minute, will type a 170-word section in about 17 minutes. A touch typist, on the other hand, typing at an average 60 words per minute, can type the same section in around 4 minutes. It has been proven that a trained touch typist can save around 20 – 35% of their time used on a computer through learning this skill.</p>
+        <p><b>4. Decrease fatigue - <br></b>Typing is both psychologically and physically exhausting when done for long periods of time. Learning to touch type properly reduces mental and physical fatigue. Mentally, it keeps you from having to focus on two things at once. All you have to worry about is your output, not finding the individual keys. Physically, it keeps you from constantly having to bend your head over the keyboard to find your next couple of keystrokes.</p>
+        <p><b>5. Productivity - <br></b>By learning touch typing, you shall become more productive and even increase your own or your staff’s confidence. Time is nearly halved and errors will become near enough non-existent. Touch typing is a skill to be proud of and is desired within most industries.</p>
+        <p><b>6. health - <br></b>Overall, touch typing is better for your health. You’re not hunched over looking at the keys, and using all of your fingers actually reduces the risk for repetitive stress injuries (RSI).</p>
+      </article>
+      <br>
+      <article>
+        <h2>How to improve your typing speed?</h2>
+        <p><b>1. Practice Touch Typing - <br><br></b>Learning how to touch type is the single most important factor in increasing your speed. In fact, as you become a better typist, looking down at the keyboard will actually slow you down. At first this may seem difficult, but train yourself to look only at the screen as you type.
+          It will be slow at first, and you may need to sneak a peek at the keyboard from time to time, but soon your fingers will be able to find the right keys without much difficulty.
+          A good tip during this early stage is to say the name of the letter as you type it. This will help your brain associate that letter with the appropriate finger movement.</p>
+        <p><b>2. Focus on the accuracy - <br></b><br>Focus on accuracy rather than speed. Speed is pointless if you have to go back and correct mistakes after every sentence. This is why it's essential that you focus more on accuracy than on speed in the beginning.
+          If you make a mistake, go back and correct it immediately. Try to do so without looking at the keyboard.
+          If you find you are making a lot of mistakes, slow down. Your first priority should be 100% accuracy.</p>
+        <p><b>3 full keyborad is yours, so use the full keyboard - <br><br></b>Although you may get the hang of typing letters pretty quickly, you may still feel uncomfortable with some of the less frequently used keys, such as the symbols and numbers. If you don't learn how to use these additional keys properly, you will find that they will slow you down for the rest of your life. To avoid this, make sure to incorporate all of the less commonly used keys into your typing practice.</p>
+        <p><b>4. Use well motions to type - <br><br></b>Don't smash the keyboard; that is, don't just hit keys without aiming first. This will often result in pressing two keys at once.
+          Avoid thumping your fingers down each time. Your fingers and hands will soon grow weary, and it'll feel like a chore instead of a tool. In other words, don't hit the keys. Tap them.</p>
+        <p><b>5. Practice every day - <br><br></b>The best way to learn is by practicing, so spend at least ten minutes every day at the keyboard.
+          It won't take long to improve your typing, and once you've got the hang of it, you'll never return to your old habits.
+          Don't forget to practice numbers and symbols. Type phone numbers and addresses, and incorporate the use of the various symbols just to practice them. The more keystrokes you work on, the more advanced your typing becomes.</p>
+        <p><b>6. Learn some keyboard shortcuts - <br></b>like copying, pasting, saving, and highlighting can all slow you down as you type. Luckily, there are some handy shortcuts you can use to perform these actions without lifting your fingers from the keyboard. Some of the most common ones are as follows:
+          <br>
+          Save: Command + s (which means to hold down the "command" key and simultaneously tap the "s" key) <br>
+          Copy: Command + c <br>
+          Cut: Command + x <br>
+          Paste: Command + v <br>
+          Undo: Command + z <br>
+          Redo: Shift + Command + z <br>
+          Highlight next letter: Shift + left arrow or right arrow
+          Highlight next word: Command + shift + right arrow or left arrow <br>
+          Search within text: Ctrl+f
+        </p>
+      </article>
+      <br>
+      <article>
+        <h2>What is Word Per Minute(WPM)?</h2>
+        <p>Words per minute (WPM) is how many words do you type in a minute, most commonly used to measure and denote the speed of typing. For measuring typing speed, each word is standardized to be five characters or five keystrokes long, which include white space. So the phrase "I run," which is five keystrokes long, counts as one word, whereas the word "Aurangabad," which is 10 letters long, is considered as two words.</p>
+      </article>
+    </div>
+  </section>
+  <!-- artical section starts here -->
+  <!-- More Blogs section strts here -->
+  <section class="blog-read-more" id="Blogs">
+    <div class="blog-container">
+      <h3 class="heading">Our Blogs</h3>
+      <div class="blog-row">
+        <div class="blog-box">
+          <img src="bg.jpg" alt="blog-image">
+          <div class="blog-info">
+            <h2>What is typing?</h2>
+            <p>It won't take long to improve your typing, and once you've got the hang of it, you'll never return to your old habits.</p>
+            <a class="blog-btn" href="commingsoon.html">Read More</a>
+          </div>
+        </div>
+        <div class="blog-box">
+          <img src="bg.jpg" alt="blog-image">
+          <div class="blog-info">
+            <h2>How to improve Your Typing speed?</h2>
+            <p>Ypu have to practice more and more with your keyboard. More practice will make your speed better.</p>
+            <a class="blog-btn" href="commingsoon.html">Read More</a>
+          </div>
+        </div>
+        <div class="blog-box">
+          <img src="bg.jpg" alt="blog-image">
+          <div class="blog-info">
+            <h2>How to feel keys of the keyboard?</h2>
+            <p>Practice with your keyboard and use keyboard functionalities to feel keys.</p>
+            <a class="blog-btn" href="commingsoon.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- More Blogs section ends here -->
+  <!-- feautres sectoin starts here -->
+  <section class="features-section">
+    <h3 class="heading">Features</h3>
+    <div class="features-container">
+
+      <div class="features-box">
+        <i class="fa-solid icon-circle fa-handshake"></i>
+        <h3>Free to Use</h3>
+        <p>can be use anywhere and free to use</p>
+      </div>
+      <div class="features-box">
+        <i class="fa-solid icon-circle fa-stopwatch"></i>
+        <h3>Quick Start</h3>
+        <p>Just one click away to know your test speed</p>
+      </div>
+      <div class="features-box">
+        <i class="fa-solid icon-circle fa-square-poll-horizontal"></i>
+        <h3>Quick Result</h3>
+        <p>Know your typing speed in just few minutes</p>
+      </div>
+    </div>
+  </section>
+  <!-- feautres sectoin ends here -->
+  <hr>
+  <!-- FAQ section starts here -->
+  <section class="section-faq">
+    <h3 class="heading">FAQ</h3>
+    <div class="que-container">
+      <!-- svg image -->
+      <img src="faq.svg" alt="svg image">
+      <!-- The box of question -->
+      <div class="que-holder">
+        <button class="toggle">
+          How can measure typing speed ?
+          <i class="fas fa-plus icon"></i>
+        </button>
+        <div class="content">
+          <p>If you want to increase your typing speed, there is only one way that is Practice, the more you practice, the better and faster you will be able to type.</p>
+        </div>
+      </div>
+      <!-- The box of question -->
+      <div class="que-holder">
+        <button class="toggle">
+          How fast I should type ?
+          <i class="fas fa-plus icon"></i>
+        </button>
+        <div class="content">
+          <p>
+            Commonly this is classified according to your education:
+          </p>
+          <hr>
+          <p>
+            Middle school (Grades 6-8): 12-25 WPM
+          </p>
+          <hr>
+          <p>
+            High school (Grades 9-12): 20-35 WPM
+          </p>
+          <hr>
+          <p>
+            College/Adult: 50 WPM
+          </p>
+        </div>
+      </div>
+      <!-- The box of question -->
+      <div class="que-holder">
+        <button class="toggle">
+          How typing speed is measured ?
+          <i class="fas fa-plus icon"></i>
+        </button>
+        <div class="content">
+          <p>Typing speed is measured according to how many words you type in a minute. It is measured in WPM.</p>
+        </div>
+      </div>
+      <div class="que-holder">
+        <button class="toggle">
+          what is WPM?
+          <i class="fas fa-plus icon"></i>
+        </button>
+        <div class="content">
+          <p>WPM is known as Word Per Minute. It means How many words you type in a minute.</p>
+        </div>
+      </div>
+      <!-- The box of question -->
+      <div class="que-holder">
+        <button class="toggle">
+          How Can I Give This test ?
+          <i class="fas fa-plus icon"></i>
+        </button>
+        <div class="content">
+          <p>Just Click On Go! Then Click on Start test button then click on the empty space then follow above paragraph and type the same paragraph. Your accuracy, speed and Mistakes will be shown to you at the top of the test box.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ section starts here -->
+  <!-- about section starts here -->
+  <section class="about-section">
+    <h3 class="heading">About</h3>
+    <div class="about-us">
+      <img src="about.svg" alt="svg image">
+      <p>Typing Online is a platform that offers a good space to practice your typing. Typing Online gives you opportunity to test your typing speed. Just One click away to get your typing speed. Typing online also provides you a Certificate that can be use anywhere you want.</p><br>
+      <a href="commingsoon.html" class="btn">Visit Profile</a>
+    </div>
+  </section>
+  <!-- about us section ends here -->
+  <!-- Footer section starts here -->
+  <footer>
+    <nav>
+      <h4>Typing<span>Online</span></h4>
+      <div class="social-media">
+        <a href="https://www.instagram.com/p/CAM4s7eBj4dVWPiQ4-KT3bOtPr2RYivy9X4i_E0/?igshid=YmMyMTA2M2Y=">
+          <i class="fa-brands fa-instagram icon icon-footer"></i>
+        </a>
+        <a href="https://loharv.github.io">
+          <i class="fa-brands fa-github icon icon-footer"></i>
+        </a>
+      </div>
+    </nav>
+    <hr>
+    <div class="flex-container">
+      <div class="flex-box">
+        <h3>About</h3>
+        <p>Typing online is a website that can be used for typing practice or typing test or for entertainment purpose</p>
+      </div>
+      <div class="flex-box">
+        <h3>Developer</h3>
+        <p>Hello, Myself Vivek Lohar I am a web developer. typing online is one of websites that i have created.</p>
+      </div>
+      <div class="foot-contact">
+        <h3>Contact</h3>
+        <hr>
+        <br>
+        <!-- footer contact us secton -->
+        <form action="/action_page.php">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:3rem"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </footer>
+  <p class="copyright">
+    <i class="fa-solid fa-copyright"></i>
+    Copyright 2022
+  </p>
+  <!-- Footer section ends here -->
+  <!-- Javascript starts here -->
+  <!-- Note: Javascript for Main test section is written in the script.js file -->
+  <!-- This is internal javascript which contains only common things from web page -->
+  <script>
+    /* javascript for faq section */
+    let toggles = document.getElementsByClassName('toggle');
+    let contentDiv = document.getElementsByClassName('content');
+    let icons = document.getElementsByClassName('icon');
+
+    for (let i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener('click', () => {
+        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+          contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+          toggles[i].style.color = "#ffffff";
+          icons[i].classList.remove('fa-plus');
+          icons[i].classList.add('fa-minus');
+        }
+        else {
+          contentDiv[i].style.height = "0px";
+          toggles[i].style.color = "#ffffff";
+          icons[i].classList.remove('fa-minus');
+          icons[i].classList.add('fa-plus');
+        }
+        for (let j = 0; j < contentDiv.length; j++) {
+          if (j !== i) {
+            contentDiv[j].style.height = "0px";
+            toggles[j].style.color = "#383736";
+            icons[j].classList.remove('fa-minus');
+            icons[j].classList.add('fa-plus');
+          }
+        }
+      });
+    }
+
+    /* javascript for Automatic writting text */
+
+    var i = 0,
+      text;
+    text = "Welcome! typingonline.tk want to test your typing speed"
+
+    function typing() {
+      if (i < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+      }
+    }
+    typing();
+
+    /* javascript for navigation menu */
+
+    var display = document.getElementById("sidemenu");
+    var hidden = document.getElementById("closemenu");
+    var list = document.getElementById("list");
+
+    display.onclick = function() {
+      list.style.visibility = "visible";
+      list.style.right = "0%";
+    }
+    hidden.onclick = function() {
+      list.style.right = "-100%";
+    }
+  </script>
+
+  <!-- Javascript for sticky navigation menu -->
+
+  <script src="script.js"></script>
+  <!-- javascript ends here -->
+</body>
+
+</html>
