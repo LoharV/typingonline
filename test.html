@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- SEO -->
   <meta name="description" content="Want to know your typing speed but don't have time? You are just one click away to know your typing speed for free.">
@@ -22,10 +21,10 @@
   <!-- Custom Links -->
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <!------- Google Icons Link -------->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
 <body>
   <!-- Navigation Bar Start Here -->
   <nav class="navigation">
@@ -44,10 +43,10 @@
       <kbd>E</kbd>
     </div>
     <!-- toggle menu -->
-    <i class="material-icons" id="sidemenu">menu</i>
+    <i class="fa-solid fa-bars-staggered" id="OpenMenu"></i>
     <!-- Small Device navigation menu -->
     <ul class="menu" id="list">
-      <i class="material-icons" sidemenu id="closemenu">close</i>
+      <i class="fa-solid fa-xmark" OpenMenu id="CloseMenu"></i>
       <li><a href="index.html">Home</a></li>
       <li><a href="test.html">Test</a></li>
       <li><a href="#Blogs">Blogs</a></li>
@@ -425,8 +424,8 @@
 
     /* javascript for navigation menu */
 
-    var display = document.getElementById("sidemenu");
-    var hidden = document.getElementById("closemenu");
+    var display = document.getElementById("OpenMenu");
+    var hidden = document.getElementById("CloseMenu");
     var list = document.getElementById("list");
 
     display.onclick = function() {
