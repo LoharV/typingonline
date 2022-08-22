@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- SEO -->
   <meta name="description" content="Want to know your typing speed but don't have time? You are just one click away to know your typing speed for free.">
@@ -24,6 +25,7 @@
   <!------- Google Icons Link -------->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
   <!-- Navigation Bar Start Here -->
   <nav class="navigation">
@@ -404,11 +406,14 @@
           }
         }
       });
-   }
+    }
+
     /* javascript for Automatic writting text */
+
     var i = 0,
       text;
     text = "Get your typing speed in just 2 minutes"
+
     function typing() {
       if (i < text.length) {
         document.getElementById("text").innerHTML += text.charAt(i);
@@ -417,7 +422,9 @@
       }
     }
     typing();
+
     /* javascript for navigation menu */
+
     var display = document.getElementById("sidemenu");
     var hidden = document.getElementById("closemenu");
     var list = document.getElementById("list");
@@ -430,8 +437,11 @@
       list.style.right = "-100%";
     }
   </script>
+
   <!-- Javascript for sticky navigation menu -->
+
   <script src="script.js"></script>
   <!-- javascript ends here -->
 </body>
+
 </html>
