@@ -90,7 +90,7 @@ const displayResult = () => {
     timeTaken = (120 - time) / 100;
   }
   document.getElementById("wpm").innerText =
-    (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
+    (userInput.value.length / 10 / timeTaken).toFixed(4) + " wpm";
   document.getElementById("accuracy").innerText =
     Math.round(
       ((userInput.value.length - mistakes) / userInput.value.length) * 100
