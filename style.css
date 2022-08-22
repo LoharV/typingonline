@@ -31,6 +31,8 @@ font-family: 'Raleway', sans-serif; */
   --border-radius-small: .1rem;
   --font-famly-heading: 'Comfortaa', cursive;
   --font-famiy-body: "Poppins", sans-serif;
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 19;
 }
 * {
   padding: 0;
@@ -39,9 +41,31 @@ font-family: 'Raleway', sans-serif; */
   font-family: 'Nunito', sans-serif;
 }
 body {
-  background-color: #f9f9f9;
+  background-color: #fff;
   position: relative;
   scroll-behavior: smooth;
+}
+.logo-in-kbd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/* This button is for logo styling */
+kbd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  text-transform: uppercase;
+}
+body:hover .go-to-top {
+  display: block;
 }
 p {
   font-size: 1rem;
@@ -66,16 +90,48 @@ a {
   text-decoration: none;
 }
 .btn {
-  padding: 1rem;
-  background: var(--theme-color);
-  border-radius: .2rem;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+  position: relative;
+  display: inline-block;
   width: 10rem;
+  height: 3rem;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(190deg, #535353, #B2B2B2);
+  background: -moz-linear-gradient(190deg, #535353, #535353);
+  background: -o-linear-gradient(190deg, #535353, #535353);
+  background: linear-gradient(280deg, #535353, #535353);
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease;
+}
+.btn:hover {
+  transform: translateY(5px);
+  background: linear-gradient(90deg, #4E4E4E, #313131);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  bottom: 5px;
+  right: 12px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #4E4E4E, #8B8B8B);
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, .25), 10px 5px 10px rgba(0, 0, 0, .15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+.btn p {
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: monospace;
 }
 .flex-container {
   padding: 1rem;
@@ -95,27 +151,16 @@ a {
 /* !!!!!!!!!!!!!!!!!!!!!!!
   Navigation Section Starts Here
 !!!!!!!!!!!!!!!!!!!!!!!!!! */
-body:hover .navigation {
-  background: #F8F2FF;
-}
 .navigation {
-  height: 7rem;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  background: var(--white);
+  background: white;
   position: sticky;
   top: 0;
   z-index: 1;
-}
-.navigation a {
-  text-transform: uppercase;
-  color: var(--theme-color);
-  letter-spacing: 1.5px;
-  font-size: 2rem;
-  letter-spacing: 2.5px;
-  font-weight: 800;
 }
 .menu {
   display: flex;
@@ -125,7 +170,7 @@ body:hover .navigation {
   list-style: none;
 }
 .menu li {
-  list-style: none;
+list-style: none;
 }
 .menu li a {
   text-decoration: none;
@@ -143,7 +188,7 @@ body:hover .navigation {
 #closemenu {
   position: relative;
   display: none;
-  font-size: 2rem;
+  font-size: 26px;
   font-weight: 300;
   color: var(--theme-color);
 }
@@ -170,25 +215,31 @@ header {
   flex-direction: column;
   gap: 2rem;
   background-image:
-    linear-gradient(45deg,
-      rgba(0, 0, 0, .7),
-      rgba(0, 0, 0, 1)),
+    linear-gradient(45deg, rgba(8, 139, 118, .75), rgba(8, 139, 118, .75)),
     url('bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
 #text {
-  /* max-width: 30rem; */
   width: 80%;
   letter-spacing: 2px;
   text-align: center;
   font-size: var(--font-size-large);
   color: var(--white);
+  font-family: 'Raleway', sans-serif;
 }
 .quick-start {
   width: 100%;
   padding: 2rem 0;
+}
+/* For practice section */
+.Practice {
+  background: var(--theme-color);
+  color: white;
+}
+.Practice .fa-face-meh {
+  color: white;
 }
 .quick-start-container {
   width: 80%;
@@ -198,7 +249,49 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  overflow: hidden;
 }
+.quick-start-container i {
+  font-size: 10rem;
+  color: var(--theme-color);
+  animation: shake 10s infinite;
+  box-shadow: var(--shadow-);
+  border-radius: 50%;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }}
 .quick-start-container h1 {
   font-size: 2rem;
   text-align: center;
@@ -209,8 +302,7 @@ header {
 .quick-start-container p {
   text-align: center;
 }
-.info-section,
-.about-section {
+.info-section {
   padding: 2rem 0;
   background: var(--section-bg-color);
 }
@@ -220,10 +312,13 @@ header {
 }
 .test-info .info {
   width: 100%;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.info img {
+  width: 60%;
+  margin-left: 20%;
 }
 .test-info p {
   font-weight: 350;
@@ -237,6 +332,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--theme-color);
 }
 .container {
   width: 80%;
@@ -273,7 +369,7 @@ textarea {
   margin-top: 2rem;
   padding: 1rem;
   background: var(--theme-color);
-  border-radius: .2rem;
+  border-radius: 10rem;
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -312,6 +408,7 @@ textarea {
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .section-faq {
   padding: 2rem 0;
+  background: var(--theme-color);
 }
 .section-faq .que-container {
   width: 100%;
@@ -328,11 +425,11 @@ textarea {
   box-shadow: var(--shadow-);
 }
 .que-holder:hover .toggle {
-  color: var(--white);
+  color: white;
 }
 .toggle {
-  background: var(--section-bg-color);
-  color: var(--theme-color-2);
+  background: var(--theme-color-2);
+  color: white;
   width: 100%;
   padding: 1rem 1rem;
   font-size: var(--font-size-p);
@@ -419,15 +516,12 @@ textarea {
   letter-spacing: .8px;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!
-  About Section Starts Here
-!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-/* !!!!!!!!!!!!!!!!!!!!!!!
   Blog Section Starts Here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .blog-read-more {
   padding: 2rem 0;
   width: 100%;
+  background: var(--theme-color);
 }
 .blog-container {
   width: 80%;
@@ -445,6 +539,7 @@ textarea {
   overflow: hidden;
   height: 100%;
   border-radius: .2rem;
+  box-shadow: var(--shadow-);
   background: var(--section-bg-color);
 }
 .blog-box:hover img {
@@ -481,7 +576,6 @@ textarea {
   About section Starts Here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .about-section {
-  height: 60rem;
   padding: 2rem 0;
 }
 .about-us {
@@ -489,11 +583,8 @@ textarea {
   margin: 0 auto;
 }
 .about-us img {
-  width: 100%;
-  margin: 1rem auto;
-}
-.about-us a {
-  padding: 1rem;
+  width: 70%;
+  margin-left: 15%;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!
   Footer Section Starts Here
@@ -616,6 +707,24 @@ input[type=submit]:hover {
   flex-direction: column;
   gap: 2rem;
 }
+/* scroll to top */
+.go-to-top {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .2rem;
+  background: var(--theme-color);
+  bottom: 1rem;
+  right: 1rem;
+  margin-right: 1rem;
+  position: fixed;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: #fff;
+  display: none;
+}
+.fa-arrow-up {
+  margin: 1rem;
+}
 /* =================
 --------------------
 Responsive navigation
@@ -696,9 +805,7 @@ secton starts here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
   header {
     background-image:
-      linear-gradient(45deg,
-        rgba(245, 70, 66, 0.75),
-        rgba(8, 83, 156, 0.75)),
+      linear-gradient(45deg, rgba(8, 139, 118, .75), rgba(8, 139, 118, .75)),
       url('bg-mobile.jpg');
     background-size: cover;
     background-position: center;
@@ -745,7 +852,7 @@ secton starts here
   }
   .container {
     padding: 1rem .8rem;
-  }
+}
   .stats {
     margin-bottom: 1rem;
     font-size: var(--resp-font-size-p);
@@ -753,13 +860,13 @@ secton starts here
   textarea {
     font-size: var(--resp-font-size-p);
   }
-  #stop-test {
-    margin-right: 1rem;
-  }
   #start-test,
   #stop-test {
     padding: 1rem 1rem;
-    font-size: var(--resp-font-size-p);
+    font-size: 10px;
+  }
+  .artical-container {
+    width: 90%;
   }
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   About Us Section Starts Here
@@ -775,8 +882,6 @@ secton starts here
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .about-section {
     background: var(--section-bg-color);
-    height: 52rem;
-    padding: 2rem;
   }
   .about-us {
     width: 90%;
@@ -785,11 +890,8 @@ secton starts here
   .about-us p {
     margin-bottom: 2rem;
   }
-  .about-us a {
-    text-align: center;
-  }
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    btn styling Starts Here
+   700 btn styling Starts Here
   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .btn {
     width: 18rem;
@@ -805,13 +907,12 @@ secton starts here
   }
 }
 @media (max-width: 375px) {
-    p {
-        font-size: 8px;
-    }
-    
-    artical p {
-        font-size: 7px;
-    }
+  p {
+    font-size: 8px;
+  }
+  artical p {
+    font-size: 7px;
+  }
 }
 @media (max-width: 480px) {
   /* !!!!!!!!!!!!!!!!!!!!!!!
@@ -819,6 +920,17 @@ secton starts here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
   p {
     font-size: 10px;
+  }
+  .logo-in-kbd {
+    gap: 2px;
+  }
+  .logo-in-kbd kbd {
+    font-size: 10px;
+    font-family: monospace;
+    width: 1rem;
+    height: 1rem;
+    box-shadow: var(--shadow-)
+      /* border: .5px solid black; */
   }
   .heading {
     font-size: var(--resp-font-size-normal-head);
@@ -881,21 +993,10 @@ secton starts here
   .menu li a {
     color: var(--white);
   }
-  /* !!!!!!!!!!!!!!!!!!!!!!!
-  Header Section Starts Here
+  /*!!!!!!!!!!!!!!!!!!!!!!!
+Responsive Header Section Starts Here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  header {
-    background-image:
-      linear-gradient(45deg,
-        rgba(245, 70, 66, 0.75),
-        rgba(8, 83, 156, 0.75)),
-      url('bg-mobile.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  /* !!!!!!!!!!!!!!!!!!!!!!!
-  Header Text Section Starts Here
-!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  /* Responsive TYping Text */
   #text {
     color: #fff;
     font-size: var(--resp-font-size-head);
@@ -904,8 +1005,9 @@ secton starts here
   .quick-start-container {
     width: 90%;
   }
+
   /* !!!!!!!!!!!!!!!!!!!!!!!
-  Test Container Section Starts Here
+  Responsive Test Container Section Starts Here
 !!!!!!!!!!!!!!!!!!!!!!!!!!*/
   .test-info {
     width: 90%;
@@ -945,11 +1047,10 @@ secton starts here
   }
   #stop-test {
     margin-right: 1rem;
-  }
+}
   #start-test,
   #stop-test {
     padding: 1rem 1rem;
-    font-size: var(--resp-font-size-p);
   }
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   About Us Section Starts Here
@@ -965,21 +1066,16 @@ secton starts here
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .about-section {
     background: var(--section-bg-color);
-    height: 52rem;
-    padding: 2rem;
   }
   .about-us {
     width: 90%;
     text-align: justify;
-  }
+}
   .about-us p {
     margin-bottom: 2rem;
   }
-  .about-us a {
-    text-align: center;
-  }
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    btn styling Starts Here
+  Responsive BTNsection starts here
   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .btn {
     width: 18rem;
@@ -995,15 +1091,33 @@ secton starts here
   }
 }
 @media (max-width: 750px) {
-    p {
-        font-size: 16px;
-    }
-}
+  p {
+    font-size: 16px;
+  }
+  .btn p {
+    font-size: 12px;
+  }
+  .btn::before {
+    top: 5px;
+    left: 10px;
+    bottom: 5px;
+    right: 10px;
+  }
+  header {
+    background-image:
+      linear-gradient(45deg, rgba(8, 139, 118, .75), rgba(8, 139, 118, .75)),
+      url('bg-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+  }}
 @media (min-width: 1440px) {
-    p {
-        font-size: 21px;
-    }
-    #text {
-      max-width: 60%;
-    }
-}
+  p {
+    font-size: 21px;
+  }
+  #text {
+    max-width: 60%;
+  }
+  .about-us img {
+    width: 50%;
+    text-align: center;
+  }}
