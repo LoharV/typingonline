@@ -3,17 +3,21 @@ const quoteApiUrl = "https://api.quotable.io/random?minLength=80&maxLength=100";
 const quoteSection = document.getElementById("quote");
 const userInput = document.getElementById("quote-input");
 let quote = "";
-let time = 120;
+let time = 60;
 let timer = "";
 let mistakes = 0;
+
 //Display random quotes
 const renderNewQuote = async () => {
   //Fetch contents from url
   const response = await fetch(quoteApiUrl);
+
   //Store response
   let data = await response.json();
+
   //Access quote
   quote = data.content;
+
   //Array of characters in the quote
   let arr = quote.split("").map((value) => {
     //wrap the characters in a span tag
@@ -22,13 +26,16 @@ const renderNewQuote = async () => {
   //join array for displaying
   quoteSection.innerHTML += arr.join("");
 };
+
 //Logic for comparing input words with quote
 userInput.addEventListener("input", () => {
   let quoteChars = document.querySelectorAll(".quote-chars");
   //Create an arrat from received span tags
   quoteChars = Array.from(quoteChars);
+
   //array of user input characters
   let userInputChars = userInput.value.split("");
+
   //loop through each character in quote
   quoteChars.forEach((char, index) => {
     //Check if char(quote character) = userInputChars[index](input character)
@@ -64,6 +71,7 @@ userInput.addEventListener("input", () => {
     }
   });
 });
+
 //Update Timer on screen
 function updateTimer() {
   if (time == 0) {
@@ -73,11 +81,13 @@ function updateTimer() {
     document.getElementById("timer").innerText = --time + "s";
   }
 }
+
 //Sets timer
 const timeReduce = () => {
-  time = 120;
+  time = 60;
   timer = setInterval(updateTimer, 1000);
 };
+
 //End Test
 const displayResult = () => {
   //display result div
@@ -87,15 +97,16 @@ const displayResult = () => {
   userInput.disabled = true;
   let timeTaken = 1;
   if (time != 0) {
-    timeTaken = (120 - time) / 100;
+    timeTaken = (60 - time) / 100;
   }
   document.getElementById("wpm").innerText =
-    (userInput.value.length / 10 / timeTaken).toFixed(4) + " wpm";
+    (userInput.value.length / 5 / timeTaken).toFixed(2) + " wpm";
   document.getElementById("accuracy").innerText =
     Math.round(
       ((userInput.value.length - mistakes) / userInput.value.length) * 100
     ) + " %";
 };
+
 //Start Test
 const startTest = () => {
   mistakes = 0;
@@ -105,6 +116,7 @@ const startTest = () => {
   document.getElementById("start-test").style.display = "none";
   document.getElementById("stop-test").style.display = "block";
 };
+
 window.onload = () => {
   userInput.value = "";
   document.getElementById("start-test").style.display = "block";
